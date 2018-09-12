@@ -283,7 +283,7 @@ def plot_solution(net, u, alpha, xi_p, xi_m, demand, T, nt):
     fmt = r'demand and delivery at vertex {}'
     for i, consumer in enumerate(consumers):
         line = end_vertices.index(consumer)
-        axes[i].step(t, np.concatenate(([np.nan], demand[i,:])), 'r-')
+        axes[i].plot(t[:-1], demand[i,:], 'r-')
         axes[i].plot(t, xi_p[line][-1,:], 'b-')
         axes[i].set_xlabel(r'time $t$')
         axes[i].set_ylabel(fmt.format(end_vertices[line]))
@@ -310,7 +310,7 @@ if __name__ == '__main__':
     if True: # extended tree network
         net = network_extended_tree
         T = 26.
-        if True: # dt = dx = 0.25
+        if False: # dt = dx = 0.25
             demand = np.loadtxt('demand_extended_tree.dat')
             nt = 4*26+1 
             nx = 4
@@ -321,7 +321,7 @@ if __name__ == '__main__':
     else:
         net = network_subgrid
         T = 26.
-        if True: # dt = dx = 0.25
+        if False: # dt = dx = 0.25
             demand = np.loadtxt('demand_subgrid.dat')
             nt = 4*26+1 
             nx = 4
