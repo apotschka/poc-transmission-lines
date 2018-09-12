@@ -1,4 +1,4 @@
-# Partial Outer Convexification for transmission line control
+# Partial outer convexification for transmission line control
 
 This repository contains the source code for the mixed-integer optimal control
 problem described on
