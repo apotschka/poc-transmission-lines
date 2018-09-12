@@ -6,7 +6,7 @@ problem described on
 
 ## Installation
 
-You need a working version of [CasADi](https://casadi.org) and its default
+You need a working version of [CasADi](http://casadi.org) and its default
 Python bindings.
 
 The program can be run in IPython with Python 3 via
